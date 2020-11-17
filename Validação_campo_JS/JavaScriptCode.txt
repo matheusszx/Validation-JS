@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+
+<body style="display: flex; justify-content: center;">
+
+
+    <div style="width: 19%; display: flex; justify-content: space-between; align-items: center; height: 10vh;">
+        <label for="id">Id. Único</label>&nbsp;
+        <input type="text" id="identificador" onchange="myFunction()" required />
+    </div>
+
+    <script>
+        function myFunction() {
+
+            //Chamando o ID do input como variavel
+            var idUserName = document.getElementById("identificador");
+
+            //Remove os espaços em brancos
+            idUserName.value = idUserName.value.replace(/\s/g, "");
+
+            //caracteres válidos do campo #Identificador
+            idUserName.value = idUserName.value.replace(/[^a-zA-Z0-9]/g, "");
+            return true;
+        }
+    </script>
+</body>
+</html>

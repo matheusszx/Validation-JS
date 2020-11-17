@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <title>Teste</title>
+</head>
+
+<body style="display: flex; justify-content: center;">
+
+
+    <div style="width: 19%; display: flex; justify-content: space-between; align-items: center; height: 10vh;">
+        <label for="id">Id. Único</label>&nbsp;
+        <input type="text" id="Identificador" onkeyup="validaIdentificador()" required minlength="4" maxlength="10"/>
+    </div>
+
+    <script>
+        
+        function validaIdentificador() {
+
+            //caracteres válidos do campo #Identificador e remove espaçoes em branco (JQuery) 
+            $("#Identificador").val($("#Identificador").val().replace(/[^a-z0-9]/gim, ""));
+
+            //Chamando o ID do input como variavel
+            //var idUserName = document.getElementById("identificador");
+
+            //caracteres válidos do campo #Identificador e remove espaçoes em branco
+            //idUserName.value = idUserName.value.replace(/[^a-z0-9]/gi, "");
+            
+        }
+    </script>
+</body>
+
+</html>
